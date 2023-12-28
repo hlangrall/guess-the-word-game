@@ -17,20 +17,20 @@ const playAgainButton = document.querySelector(".play-again");
 // starting word to test out the game until fetch from hosted file
 const word = "magnolia";
 
-const wordSymbol = function (word) {
-    const wordSymbolLetters = [];
-    for (const letter of word) {
-        console.log(letter);
-        wordSymbolLetters.push("●")
-    }
-    wordInProgress.innerText = wordSymbolLetters.join("");
+const placeholder = function (word) {
+  const placeholderLetters = [];
+  for (const letter of word) {
+    console.log(letter);
+    placeholderLetters.push("●");
+  }
+  wordInProgress.innerText = placeholderLetters.join("");
 };
 
-wordSymbol(word);
+placeholder(word);
 
 guessButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    const guess = letterInput.value;
-    console.log(guess);
-    letterInput.value = "";
+  e.preventDefault();
+  const guess = letterInput.value;
+  console.log(guess);
+  letterInput.value = "";
 });
